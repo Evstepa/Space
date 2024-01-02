@@ -197,7 +197,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url('./img/background.jpg');
+  background-image: url('./img/background.png');
+  /* background-image: url('./img/background.jpg'); */
 }
 
 .circular-menu {
