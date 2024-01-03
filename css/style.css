@@ -206,10 +206,6 @@ body {
   height: 100vh;
 }
 
-.circular-menu__item:hover {
-  font-size: larger;
-}
-
 .circular-menu__link {
   position: absolute;
   top: 50%;
@@ -224,6 +220,7 @@ body {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
+  font-size: 30px;
   color: var(--color-white);
   opacity: 0;
   transition: 0.5s ease-in-out;
@@ -231,6 +228,10 @@ body {
   -moz-transition: 0.5s ease-in-out;
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
+}
+
+.circular-menu__item:hover .circular-menu__link {
+  font-size: 40px;
 }
 
 .circular-menu__button {
@@ -252,7 +253,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  font-size: x-large;
+  font-size: 40px;
   text-transform: uppercase;
   transition: font-size 0.3s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
@@ -262,7 +263,7 @@ body {
 }
 
 .circular-menu__button:hover .circular-menu__title {
-  font-size: xx-large;
+  font-size: 50px;
 }
 
 /* .circular-menu__button-active .circular-menu__title{

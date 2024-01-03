@@ -15,9 +15,40 @@
 }
 
 @media (max-width: 730px) {
+  .container {
+    padding: 10px 20px;
+  }
+  .circular-menu__link {
+    font-size: 12px;
+  }
 
+  .circular-menu__item:hover .circular-menu__link {
+    font-size: 20px;
+  }
+
+  .circular-menu__title {
+    font-size: 20px;
+  }
+
+  .circular-menu__button:hover .circular-menu__title {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 480px) {
+  .circular-menu__link {
+    font-size: 10px;
+  }
 
+  .circular-menu__item:hover .circular-menu__link {
+    font-size: 14px;
+  }
+
+  .circular-menu__title {
+    font-size: 16px;
+  }
+
+  .circular-menu__button:hover .circular-menu__title {
+    font-size: 20px;
+  }
 }
