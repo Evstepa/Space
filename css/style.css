@@ -334,6 +334,7 @@ body {
 .item__question {
   margin-bottom: 10px;
   font-weight: bold;
+  text-align: left;
 }
 
 .item__answer {
