@@ -46,6 +46,7 @@ body {
   /* colors */
   --color-back: #050d54;
   --color-text: #efef8d;
+  --color-border: #8c3be4;
   /* --color-bg: #2c2a41; */
   --color-white: #FFFFFF;
   --color-border: rgb(65, 208, 237);
@@ -206,7 +207,7 @@ body {
 .circular-menu {
   position: relative;
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
 }
 
 .circular-menu__link {
@@ -270,10 +271,6 @@ body {
   font-size: 50px;
 }
 
-/* .circular-menu__button-active .circular-menu__title{
-  color: var(--color-text);
-} */
-
 /* main */
 .main-title {
   display: none;
@@ -316,6 +313,7 @@ body {
   font-weight: bold;
 }
 
+/* аккордион */
 .paragraphs {
   display: flex;
   flex-direction: column;
@@ -323,6 +321,10 @@ body {
   align-items: flex-start;
   gap: 20px;
   font-size: 20px;
+}
+
+.paragraphs__item {
+  padding-top: 10px;
 }
 
 .item__btn {
@@ -335,6 +337,15 @@ body {
   margin-bottom: 10px;
   font-weight: bold;
   text-align: left;
+  transition: font-size 0.5s ease-in-out;
+  -webkit-transition: font-size 0.5s ease-in-out;
+  -moz-transition: font-size 0.5s ease-in-out;
+  -ms-transition: font-size 0.5s ease-in-out;
+  -o-transition: font-size 0.5s ease-in-out;
+}
+
+.paragraphs__item:hover .item__question {
+  font-size: 22px;
 }
 
 .item__answer {
@@ -378,8 +389,6 @@ body {
   -o-transition: height 0.5s ease-in-out;
 }
 
-
-
 /* holes */
 .holes__container {
   background-image: url('../img/hole.jpg')
@@ -413,6 +422,11 @@ body {
 /* others */
 .others__container {
   background-image: url('../img/others.jpg')
+}
+
+/* biblio */
+.biblio__container {
+  background-image: url('../img/biblio.jpg')
 }
 
 /* footer */

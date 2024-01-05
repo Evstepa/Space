@@ -18,8 +18,9 @@
   .container {
     padding: 10px 20px;
   }
+
   .circular-menu__link {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .circular-menu__item:hover .circular-menu__link {
@@ -27,17 +28,21 @@
   }
 
   .circular-menu__title {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .circular-menu__button:hover .circular-menu__title {
+    font-size: 40px;
+  }
+
+  .title {
     font-size: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .circular-menu__link {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .circular-menu__item:hover .circular-menu__link {
@@ -45,10 +50,15 @@
   }
 
   .circular-menu__title {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .circular-menu__button:hover .circular-menu__title {
-    font-size: 20px;
+    font-size: 24px;
   }
+
+  .title {
+    font-size: 24px;
+  }
+
 }
