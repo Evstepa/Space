@@ -64,9 +64,23 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: var(--color-white);
   border: none;
   outline: none;
 }
+
+.title {
+  margin: 0;
+  padding: 10px;
+  /* max-width: 653px; */
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 62px;
+  letter-spacing: 2.2px;
+}
+
 /*
 .btn {
   position: relative;
@@ -118,18 +132,6 @@ body {
 .btn-active {
   background-color: var(--color-active);
   border-color: var(--color-active);
-}
-
-.title {
-  margin: 0;
-  padding: 10px;
-  max-width: 653px;
-  text-align: center;
-  font-size: 52px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 62px;
-  letter-spacing: 2.2px;
 }
 
 .descr {
@@ -185,6 +187,7 @@ body {
   padding-bottom: 40px;
   max-width: 1920px;
   background-size: cover;
+  background-position: center top;
 }
 
 .container__title {
@@ -203,7 +206,7 @@ body {
 .circular-menu {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 }
 
 .circular-menu__link {
@@ -221,6 +224,7 @@ body {
   vertical-align: middle;
   text-transform: uppercase;
   font-size: 30px;
+  font-weight: bold;
   color: var(--color-white);
   opacity: 0;
   transition: 0.5s ease-in-out;
@@ -303,10 +307,77 @@ body {
   opacity: 1;
 }
 
+.definition {
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.term {
+  font-weight: bold;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.item__btn {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__question {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.item__answer {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+
+.item__answer-par {
+  display: block;
+  margin-bottom: 10px;
+  max-width: 1030px;
+  text-align: left;
+  line-height: 130%;
+}
+
+.item__answer-par:last-child {
+  margin-bottom: 0;
+}
+
+.item__btn--active .item__answer {
+  display: inline;
+  opacity: 1;
+}
+
 /* voids */
 .voids__container {
-  background-image: url('../img/1679191424_bogatyr-club-p-fon-kosmos-besshovnii-foni-instagram-48.jpg')
+  background-image: url('../img/voids.jpg');
+  transition: height 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -ms-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
 }
+
+
 
 /* holes */
 .holes__container {

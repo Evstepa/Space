@@ -46,7 +46,24 @@
     $btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     })
-  })
+  });
+
+  // аккордеон
+  let accord = document.querySelectorAll('.item__btn');
+  accord.forEach(function(accord_btn) {
+    accord_btn.addEventListener('click', function(e) {
+      if(e.currentTarget.classList.contains('item__btn--active')) {
+        e.currentTarget.classList.remove('item__btn--active');
+      }
+      else {
+        accord.forEach (function(btn) {
+          btn.classList.remove('item__btn--active');
+
+        });
+        e.currentTarget.classList.add('item__btn--active');
+      };
+    });
+  });
 
 }) ();
 
