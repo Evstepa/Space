@@ -56,10 +56,10 @@
         e.currentTarget.classList.remove('item__btn--active');
       }
       else {
-        accord.forEach (function(btn) {
-          btn.classList.remove('item__btn--active');
+        // accord.forEach (function(btn) {
+        //   btn.classList.remove('item__btn--active');
 
-        });
+        // });
         e.currentTarget.classList.add('item__btn--active');
       };
     });
