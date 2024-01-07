@@ -382,7 +382,9 @@ body {
 }
 
 /* модальное окно */
-
+.modal {
+  display: none;
+}
 
 /* voids */
 .voids__container {
