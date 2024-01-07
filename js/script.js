@@ -58,12 +58,15 @@
       else {
         // accord.forEach (function(btn) {
         //   btn.classList.remove('item__btn--active');
-
         // });
         e.currentTarget.classList.add('item__btn--active');
       };
     });
   });
 
+  // слайдер в модальном окне
+  if(document.querySelector('.modal__swiper')) {
+
+  }
 }) ();
 

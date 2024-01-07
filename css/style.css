@@ -381,6 +381,9 @@ body {
   opacity: 1;
 }
 
+/* модальное окно */
+
+
 /* voids */
 .voids__container {
   background-image: url('../img/voids.jpg');
