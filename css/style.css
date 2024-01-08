@@ -90,9 +90,10 @@ body {
   position: relative;
   margin: 0 auto;
   padding: 50px 40px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   max-width: 1920px;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center top;
   visibility: visible;
@@ -119,7 +120,7 @@ body {
 .header__container {
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: fit-content;
   background-image: url('../img/bg1.gif');
 
 }
@@ -352,6 +353,10 @@ body {
   cursor: pointer;
 }
 
+.swiper-pagination{
+  bottom: auto !important;
+}
+
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
@@ -363,6 +368,7 @@ body {
 
 /* voids */
 .voids__container {
+  height: fit-content;
   background-image: url('../img/voids.jpg');
   transition: height 0.5s ease-in-out;
   -webkit-transition: height 0.5s ease-in-out;
@@ -412,6 +418,11 @@ body {
 }
 
 /* footer */
+.footer__container {
+  min-height: 50px;
+  height: fit-content;
+}
+
 .footer__content {
   text-align: center;
 }

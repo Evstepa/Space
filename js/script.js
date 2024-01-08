@@ -33,7 +33,11 @@
     items.forEach((item) => {
       item.addEventListener('click', (e) => {
         let href = e.currentTarget.href.split('#')[1];
-        document.getElementById(href).firstElementChild.classList.toggle('unvisible');
+        const target = document.getElementById(href).firstElementChild;
+        if (!target.classList.contains('unvisible')) {
+          e.preventDefault();
+        }
+        target.classList.toggle('unvisible');
       })
     })
   });
