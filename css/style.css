@@ -82,101 +82,6 @@ body {
   letter-spacing: 2.2px;
 }
 
-/*
-.btn {
-  position: relative;
-  padding: 20px 50px;
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
-  box-shadow: none;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  -webkit-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  -ms-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  -o-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.btn::after {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: -6px;
-  right: -6px;
-  bottom: -6px;
-  background-color: transparent;
-  border: none;
-  border: 5px solid var(--color-border);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.btn:focus:not(:hover):not(:active)  {
-  box-shadow: inset 0 0 0 3px var(--color-white);
-  border-color: var(--color-border);
-  background-color: var(--color-active);
-}
-
-.btn:hover {
-  border-color: var(--color-white);
-  box-shadow: inset 0 0 0 3px var(--color-white);
-}
-
-.btn:hover:not(:focus):not(:active)::after {
-  opacity: 1;
-}
-
-.btn:active {
-  border-color: var(--color-border);
-  background-color: var(--color-active);
-}
-
-.btn-active {
-  background-color: var(--color-active);
-  border-color: var(--color-active);
-}
-
-.descr {
-  margin: 0;
-  padding: 10px;
-  max-width: 840px;
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 1.0px;
-}
-
-.link {
-  padding: 9px;
-  border:none;
-  outline: none;
-  color: var(--color-white);
-  background-color: transparent;
-  transition: color 0.3s ease-in-out, outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  -webkit-transition: color 0.3s ease-in-out, outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  -moz-transition: color 0.3s ease-in-out, outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  -ms-transition: color 0.3s ease-in-out, outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out, outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.link:focus:not(:hover):not(:active) {
-  color: var(--color-white);
-  outline: 2px solid var(--color-white);
-  background-color: var(--color-active);
-}
-
-.link:hover {
-  color: var(--color-border);
-  background-color: transparent;
-  outline: none;
-}
-
-.link:active {
-  color: var(--color-white);
-  outline: 2px solid var(--color-border);
-} */
-
 .flex {
   display: flex;
 }
@@ -187,8 +92,22 @@ body {
   padding: 50px 40px;
   padding-bottom: 40px;
   max-width: 1920px;
+  height: 100vh;
   background-size: cover;
   background-position: center top;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -webkit-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -ms-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -o-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.unvisible {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .container__title {
@@ -202,8 +121,7 @@ body {
   justify-content: center;
   height: 100vh;
   background-image: url('../img/bg1.gif');
-  /* background-image: url('../img/NXaG.gif'); */
-  /* background-image: url('../img/background.jpg'); */
+
 }
 
 .circular-menu {
@@ -383,7 +301,64 @@ body {
 
 /* модальное окно */
 .modal {
-  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(218, 208, 208, 0.7);
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  z-index: 1100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -webkit-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -ms-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -o-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.modal--isopen {
+  visibility: visible;
+  opacity: 1;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.modal__content {
+  text-align: center;
+}
+
+.modal__close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--color-back);
 }
 
 /* voids */
@@ -407,8 +382,8 @@ body {
 }
 
 /* clusters */
-.clusters__container {
-  background-image: url('../img/clusters.jpg')
+.nebulas__container {
+  background-image: url('../img/nebulas.jpg')
 }
 
 /* stars */

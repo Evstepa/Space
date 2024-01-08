@@ -28,6 +28,13 @@
           items[i].removeAttribute('style');
         }
       }
+    });
+
+    items.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        let href = e.currentTarget.href.split('#')[1];
+        document.getElementById(href).firstElementChild.classList.toggle('unvisible');
+      })
     })
   });
 
@@ -66,7 +73,35 @@
 
   // слайдер в модальном окне
   if(document.querySelector('.modal__swiper')) {
+    const swiperModal = document.querySelector('.modal__swiper');
+    const swiperOpenBtn = document.querySelector('.item__swiper-open');
 
+    swiperOpenBtn.addEventListener('click', function(e) {
+      //swiper
+      const swiperVoids = new Swiper('.modal__swiper-big.voids__swiper', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 40,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: 'true',
+        },
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+      });
+
+      //открыть окно
+      swiperModal.classList.add('modal--isopen');
+      document.body.classList.add('stop-scroll');
+
+      //закрыть окно
+      const btnSwiperModalClose = document.querySelector('.modal__swiper-close');
+      btnSwiperModalClose.addEventListener('click', () => {
+        swiperModal.classList.remove('modal--isopen');
+        document.body.classList.remove('stop-scroll');
+      });
+    })
   }
 }) ();
 
