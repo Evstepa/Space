@@ -55,7 +55,12 @@
     }, {passive: true});
 
     $btn.addEventListener('click', () => {
+      const containers = document.querySelectorAll('.container');
+      for (let i = 1; i < containers.length - 1; i++) {
+        containers[i].classList.add('unvisible');
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
     })
   });
 
