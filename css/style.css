@@ -36,8 +36,19 @@ img {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Regra';
+  src: local(''),
+    url('../fonts/Regra.woff2') format('woff2'),
+    url('../fonts/Regra.woff') format('woff'),
+    ;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: 'Graphik', sans-serif;
+  font-family: 'Regra', sans-serif;
   overflow-x: hidden;
 }
 
@@ -76,6 +87,7 @@ body {
   /* max-width: 653px; */
   text-align: center;
   font-size: 40px;
+  font-family: 'Graphik';
   font-style: normal;
   font-weight: 800;
   line-height: 62px;
@@ -129,6 +141,7 @@ body {
   position: relative;
   width: 100vw;
   height: 80vh;
+  font-family: 'Graphik';
 }
 
 .circular-menu__link {
@@ -241,7 +254,7 @@ body {
   justify-content: left;
   align-items: flex-start;
   gap: 20px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .paragraphs__item {
@@ -256,6 +269,7 @@ body {
 
 .item__question {
   margin-bottom: 10px;
+  font-family: 'Graphik';
   font-weight: bold;
   text-align: left;
   transition: font-size 0.5s ease-in-out;
@@ -288,7 +302,7 @@ body {
   margin-bottom: 10px;
   max-width: 1030px;
   text-align: left;
-  line-height: 130%;
+  line-height: 150%;
 }
 
 .item__answer-par:last-child {
