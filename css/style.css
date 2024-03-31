@@ -300,7 +300,7 @@ body {
 .item__answer-par {
   display: block;
   margin-bottom: 10px;
-  max-width: 1030px;
+  /* max-width: 1030px; */
   text-align: left;
   line-height: 150%;
 }
