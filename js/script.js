@@ -1,6 +1,8 @@
 (() => {
   //menu
   let menus = [...document.querySelectorAll('.circular-menu')];
+  // const swiperOpenBtn = document.querySelectorAll('.item__swiper-open');
+
 
   menus.map((menu) => {
     let items = menu.querySelectorAll('.circular-menu__link');
@@ -81,13 +83,14 @@
   });
 
   // слайдер в модальном окне
-  if(document.querySelector('.modal__swiper')) {
-    const swiperModal = document.querySelector('.modal__swiper');
-    const swiperOpenBtn = document.querySelector('.item__swiper-open');
+  const swiperOpenBtn = document.querySelectorAll('.item__swiper-open');
 
-    swiperOpenBtn.addEventListener('click', function(e) {
+  swiperOpenBtn.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      const swiperModal = document.getElementById(e.target.getAttribute("data-target"));
+
       //swiper
-      const swiperVoids = new Swiper('.modal__swiper-big.voids__swiper', {
+      const swiperVoids = new Swiper('.modal__swiper-big', {
         direction: 'horizontal',
         loop: false,
         spaceBetween: 40,
@@ -105,12 +108,13 @@
       document.body.classList.add('stop-scroll');
 
       //закрыть окно
-      const btnSwiperModalClose = document.querySelector('.modal__swiper-close');
+      const btnSwiperModalClose = swiperModal.querySelector('.modal__swiper-close');
       btnSwiperModalClose.addEventListener('click', () => {
         swiperModal.classList.remove('modal--isopen');
         document.body.classList.remove('stop-scroll');
       });
     })
-  }
+  })
+
 }) ();
 
