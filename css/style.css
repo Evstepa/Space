@@ -309,6 +309,15 @@ body {
   margin-bottom: 0;
 }
 
+.item__answer-li {
+  margin-left: 15px;
+}
+
+.item__answer-li::before {
+  content: "\2217";
+  margin-left: -10px;
+}
+
 .item__btn--active .item__answer {
   display: inline;
   opacity: 1;
