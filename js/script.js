@@ -90,10 +90,15 @@
       const swiperModal = document.getElementById(e.target.getAttribute("data-target"));
 
       //swiper
-      const swiperVoids = new Swiper('.modal__swiper-big', {
+      const swiper = new Swiper('.modal__swiper-big', {
         direction: 'horizontal',
+        speed: 400,
         loop: false,
         spaceBetween: 40,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          },
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
@@ -112,6 +117,8 @@
       btnSwiperModalClose.addEventListener('click', () => {
         swiperModal.classList.remove('modal--isopen');
         document.body.classList.remove('stop-scroll');
+        swiper.destroy();
+
       });
     })
   })
