@@ -117,8 +117,6 @@
       btnSwiperModalClose.addEventListener('click', () => {
         swiperModal.classList.remove('modal--isopen');
         document.body.classList.remove('stop-scroll');
-        swiper.destroy();
-
       });
     })
   })
