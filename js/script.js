@@ -95,14 +95,11 @@
         speed: 400,
         loop: false,
         spaceBetween: 40,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          },
+        effect: 'cards',
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          clickable: 'true',
+          clickable: true,
         },
         slidesPerView: 'auto',
         slidesPerGroup: 1,
@@ -117,6 +114,7 @@
       btnSwiperModalClose.addEventListener('click', () => {
         swiperModal.classList.remove('modal--isopen');
         document.body.classList.remove('stop-scroll');
+        swiper.destroy;
       });
     })
   })
