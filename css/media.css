@@ -1,7 +1,12 @@
-@media (min-width: 768px) and (orientation: landscape) {
+@media (min-width: 360px) or (orientation: landscape) {
   .swiper-slide {
-    height: 80vh;
+    width: auto;
+    height: 70vh;
   }
+
+  /* .swiper-slide__content .img {
+    width: 360px;
+  } */
 }
 
 @media (max-width: 1400px) {
@@ -93,5 +98,15 @@
   .title {
     font-size: 24px;
   }
+
+  /* .swiper-slide {
+    width: 90vw;
+  } */
+
+  /* .swiper-slide__content .img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+  } */
 
 }
