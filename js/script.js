@@ -1,8 +1,6 @@
 (() => {
   //menu
   let menus = [...document.querySelectorAll('.circular-menu')];
-  // const swiperOpenBtn = document.querySelectorAll('.item__swiper-open');
-
 
   menus.map((menu) => {
     let items = menu.querySelectorAll('.circular-menu__link');
@@ -92,7 +90,6 @@
       //swiper
       const swiper = new Swiper('.modal__swiper-big', {
         direction: 'horizontal',
-        speed: 400,
         loop: false,
         spaceBetween: 40,
         effect: 'cards',
