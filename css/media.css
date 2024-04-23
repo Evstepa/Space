@@ -22,7 +22,9 @@
 }
 
 @media (max-width: 1100px) {
-
+  .swiper-slide__content .img-caption {
+    top: 20%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -50,8 +52,12 @@
     font-size: 30px;
   }
 
-  .swiper-slide {
+  .swiper-slide__content .img {
     width: 85vw;
+  }
+
+  .swiper-slide__content .img-caption {
+    top: 25%;
   }
 }
 
@@ -103,9 +109,9 @@
     font-size: 24px;
   }
 
-  .swiper-slide {
+  /* .swiper-slide {
     width: 80vw;
-  }
+  } */
 
   /* .swiper-slide__content .img {
     max-width: 360px;
