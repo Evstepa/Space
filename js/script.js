@@ -94,8 +94,9 @@
         spaceBetween: 40,
         effect: 'cards',
         pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal',
           type: 'bullets',
+          dynamicBullets: true,
           clickable: true,
         },
         slidesPerView: 'auto',
