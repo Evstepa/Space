@@ -49,6 +49,10 @@
   .title {
     font-size: 30px;
   }
+
+  .swiper-slide {
+    width: 85vw;
+  }
 }
 
 /* @media (max-width: 730px) {
@@ -99,9 +103,9 @@
     font-size: 24px;
   }
 
-  /* .swiper-slide {
-    width: 90vw;
-  } */
+  .swiper-slide {
+    width: 80vw;
+  }
 
   /* .swiper-slide__content .img {
     max-width: 360px;

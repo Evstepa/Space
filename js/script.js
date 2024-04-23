@@ -90,7 +90,7 @@
       //swiper
       const swiper = new Swiper('.modal__swiper-big', {
         direction: 'horizontal',
-        loop: false,
+        loop: true,
         spaceBetween: 40,
         effect: 'cards',
         pagination: {
