@@ -60,6 +60,7 @@ body {
   --color-border: #8c3be4;
   --color-white: #FFFFFF;
   --color-border: rgb(65, 208, 237);
+  --color-back-btn: rgb(130, 195, 242);
 }
 
 .list-reset {
@@ -217,7 +218,7 @@ body {
   height: 80px;
   border: none;
   outline: none;
-  background-color: rgb(130, 195, 242);
+  background-color: var(--color-back-btn);
   cursor: pointer;
   border-radius: 50px;
   opacity: 0.5;
@@ -391,9 +392,26 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  padding: 5px;
+  background-color: var(--color-back-btn);
+  opacity: 0.8;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+
+.modal__close:hover {
+  opacity: 1;
 }
 
 /* .swiper-pagination-bullets {
