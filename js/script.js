@@ -34,6 +34,7 @@
       item.addEventListener('click', (e) => {
         let href = e.currentTarget.href.split('#')[1];
         const target = document.getElementById(href).firstElementChild;
+        item.classList.toggle('item--click');
         if (!target.classList.contains('unvisible')) {
           e.preventDefault();
         }
@@ -58,6 +59,10 @@
       const containers = document.querySelectorAll('.container');
       for (let i = 1; i < containers.length - 1; i++) {
         containers[i].classList.add('unvisible');
+      }
+      const itemsOpen = document.querySelectorAll('.item--click');
+      for (let i = 0; i < itemsOpen.length; i++) {
+        itemsOpen[i].classList.remove('item--click');
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
 

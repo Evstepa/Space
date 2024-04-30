@@ -20,10 +20,6 @@ a {
   text-decoration: none;
   line-height: 1;
 }
-/*
-img {
-  max-width: 100%;
-} */
 
 @font-face {
   font-family: 'Graphik';
@@ -169,8 +165,24 @@ body {
   -o-transition: 0.5s ease-in-out;
 }
 
-.circular-menu__item:hover .circular-menu__link {
+.circular-menu__link:hover .circular-menu__link {
   font-size: 40px;
+}
+
+.circular-menu__item svg {
+  position: absolute;
+  top: 60%;
+  width: 40px;
+  height: 40px;
+  transition: rotate 0.5s ease-in-out;
+  -webkit-transition: rotate 0.5s ease-in-out;
+  -moz-transition: rotate 0.5s ease-in-out;
+  -ms-transition: rotate 0.5s ease-in-out;
+  -o-transition: rotate 0.5s ease-in-out;
+}
+
+.item--click svg {
+  rotate: 180deg;
 }
 
 .circular-menu__button {
@@ -204,6 +216,24 @@ body {
 .circular-menu__button:hover .circular-menu__title {
   font-size: 50px;
 }
+
+.circular-menu__title svg {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  width: 40px;
+  height: 40px;
+  transition: rotate 0.5s ease-in-out;
+  -webkit-transition: rotate 0.5s ease-in-out;
+  -moz-transition: rotate 0.5s ease-in-out;
+  -ms-transition: rotate 0.5s ease-in-out;
+  -o-transition: rotate 0.5s ease-in-out;
+}
+
+.circular-menu__button.circular-menu__button-active svg {
+  rotate: 180deg;
+}
+
 
 /* main */
 .main-title {
@@ -290,6 +320,7 @@ body {
 }
 
 .item__question {
+  position: relative;
   margin-bottom: 10px;
   font-family: 'Graphik';
   font-weight: bold;
@@ -301,8 +332,29 @@ body {
   -o-transition: font-size 0.5s ease-in-out;
 }
 
+.item__question svg {
+  position: absolute;
+  top: -50%;
+  width: 30px;
+  height: 30px;
+  rotate: 0deg;
+  transition: rotate 0.5s ease-in-out;
+  -webkit-transition: rotate 0.5s ease-in-out;
+  -moz-transition: rotate 0.5s ease-in-out;
+  -ms-transition: rotate 0.5s ease-in-out;
+  -o-transition: rotate 0.5s ease-in-out;
+}
+
 .paragraphs__item:hover .item__question {
   font-size: 22px;
+}
+
+.paragraphs__item:hover .item__question svg {
+  top: -30%;
+}
+
+.paragraphs__item .item__btn--active .item__question svg {
+  rotate: 180deg;
 }
 
 .item__answer {
@@ -478,50 +530,52 @@ body {
 
 /* holes */
 .holes__container {
-  background-image: url('../img/hole.jpg')
+  background-image: url('../img/hole.jpg');
+  transition: height 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -ms-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
 }
 
 /* planets */
 .planets__container {
-  background-image: url('../img/planets.jpg')
+  background-image: url('../img/planets.jpg');
 }
 
 /* clusters */
 .nebulas__container {
-  background-image: url('../img/nebulas.jpg')
+  background-image: url('../img/nebulas.jpg');
 }
 
 /* stars */
 .stars__container {
-  background-image: url('../img/stars.jpg')
+  background-image: url('../img/stars.jpg');
 }
 
 /* galaxies */
 .galaxies__container {
-  background-image: url('../img/galaxy.jpg')
+  background-image: url('../img/galaxy.jpg');
 }
 
 /* quasars */
 .quasars__container {
-  background-image: url('../img/quasar.jpg')
+  background-image: url('../img/quasar.jpg');
 }
 
 /* others */
 .others__container {
-  background-image: url('../img/others.jpg')
-}
-
-/* biblio */
-.biblio__container {
-  background-image: url('../img/biblio.jpg')
+  background-image: url('../img/others.jpg');
 }
 
 /* footer */
 .footer__container {
-  min-height: 50px;
+  padding: 10px;
+  min-height: 40px;
   height: fit-content;
 }
 
 .footer__content {
+  margin: 0;
   text-align: center;
 }
